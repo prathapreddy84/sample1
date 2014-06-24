@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object gets the Monitoring &amp; Diagnostics system data  and relates it to its respective Installed Base record through integration</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Error_in_IB_Updation__c</fullName>
+        <description>This is for to Catch IB Updation due to Related GIB Unit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is for to Catch IB Updation due to Related GIB Unit</inlineHelpText>
+        <label>Error in IB Updation</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_ES_Technology__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(GE_S_N_Equip_Name__r.GE_ES_Technology__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technology</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_Act_Frd_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Fired Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_Act_Frd_Strts__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Fired Starts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_Act_Trps__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Trips</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_GasFrd_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Gas Fired Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_LCVGas_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>LCV Gas Fired Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_LCVLqd_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>LCV Liquid Fired Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_LCV_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>LCV Fired Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_LCV_Strts__c</fullName>
+        <externalId>false</externalId>
+        <label>LCV Fired Starts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_LCV_Trps__c</fullName>
+        <externalId>false</externalId>
+        <label>LCV Trips</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_LqdFrd_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Liquid Fired Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_SFDC_LEGACY_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC Legacy ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_SnpSht_dt__c</fullName>
+        <externalId>false</externalId>
+        <label>Snapshot Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GE_S_N_Equip_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>GE S/N - Equip. Name</label>
+        <referenceTo>GE_Installed_Base__c</referenceTo>
+        <relationshipLabel>Operational Data</relationshipLabel>
+        <relationshipName>Operational_Data</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Operational Data</label>
+    <nameField>
+        <displayFormat>OD-{000000000}</displayFormat>
+        <label>Operational Data ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Operational Data</pluralLabel>
+    <recordTypes>
+        <fullName>GE_HQ_Operational_Gas</fullName>
+        <active>true</active>
+        <label>Operational Data Gas</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_HQ_Operational_Steam</fullName>
+        <active>true</active>
+        <label>Operational Data Steam</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Operational_Data_Generic</fullName>
+        <active>true</active>
+        <label>Operational Data Generic</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

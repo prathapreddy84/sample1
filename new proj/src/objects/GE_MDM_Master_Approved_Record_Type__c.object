@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>Used when a User creates a new MDM customer from the MDM customer search page.  The Record Type stored in this Custom Setting will be the one used every time a new MDM Account is inserted.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_Record_Type__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Account&apos;s Record Type&apos;s API name.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account&apos;s Record Type&apos;s API name.</inlineHelpText>
+        <label>Account Record Type</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>GE MDM - Master Approved Record Type</label>
+</CustomObject>

@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PRM Object to Capture the Termination Checklist for a Termination Type Recommendation</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>GE_HQ_SFDC_LEGACY_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC Legacy ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Active_Agreement_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide the details</inlineHelpText>
+        <label>Active Agreement Details</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Additional_Red_Flags_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide details</inlineHelpText>
+        <label>Additional Red Flags Details</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Additional_Red_Flags__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Are/ Were  there any additional red flags identified during non-renewal/termination process?</inlineHelpText>
+        <label>Additional Red Flags</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Adverse_Termination_Laws_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide the details</inlineHelpText>
+        <label>Adverse Termination Laws Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Agree_Expired_more_then_6_months__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the Channel partner  agreement been expired for more than 6 months and GE has continued to do business with channel under the terms of the expired agreement?</inlineHelpText>
+        <label>Agreement Expired more than 6 months</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Agreemnt_Expired_6_months_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide the details</inlineHelpText>
+        <label>Agreement Expired 6 months Details</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_All_demo_equipment_returned_to_GE__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the Channel holding on to any demo equipment ?</inlineHelpText>
+        <label>Check if Channel hold on to Demo Equipmt</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Chanel_has_othr_active_agreements__c</fullName>
+        <description>Did you validated if Channel has other active agreements ?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Does the channel partner have other active agreements ?</inlineHelpText>
+        <label>Check if other active agreements done?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Check_adverse_termination_laws__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is partner located in a country that has adverse termination laws?</inlineHelpText>
+        <label>Check adverse termination laws/POA done?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Checklist_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Checklist Comments</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Commissions_Paid__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Commissions Paid for Sales Rep?</inlineHelpText>
+        <label>Commissions Paid for Sales Rep?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Cvrage_Plan_include_Contrct_Reltn__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Do we plan on entering into a relationship with an entity that has or had some connection with the non-renewing channel? (e.g., a former principal or employee of channel left and formed a new channel and we are planning to use them as new channel)</inlineHelpText>
+        <label>Coverage Plan include Contract Relation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Cvrg_Pln_includ_Cntrct_Rltn_dtail__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide the details</inlineHelpText>
+        <label>Covrage Plan includ Contrct Rlatn detail</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_De_provisioned_any_systems_web__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Has plan to turn off systems, websites, etc, been validated with P&amp;L Channel Leaders ?</inlineHelpText>
+        <label>Plan to Turn off systems, websites,?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Direct_indirect_strategy_changed__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the plan been approved by Regional/P&amp;L Channel Leader ?</inlineHelpText>
+        <label>Plan approved by Reg/P&amp;L Channel Leader?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Disputes_Claims_Settled__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Disputes/Claims Settled?</inlineHelpText>
+        <label>Disputes/Claims Settled?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_GE_Logo_cease_and_desist_notific__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>GE Logo cease and desist notification?</inlineHelpText>
+        <label>GE Logo cease and desist notification?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_GE_Prod_make_more_than_25_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, Please provide details</inlineHelpText>
+        <label>GE Product make more than 25% Details</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_GE_Product_make_more_than_25__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Do sales of GE products make up more than 25% of channel partner’s sales for last 12 months?</inlineHelpText>
+        <label>GE Product make more than 25%</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_If_other_agreements_notified_P_Ls__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, have other P&amp;Ls  been notified ?</inlineHelpText>
+        <label>If other agreements, P&amp;Ls notified?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Inventory_buy_back_option__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Inventory buy-back option?</inlineHelpText>
+        <label>Inventory buy-back option?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Is_there_any_impact_to_other_P_Ls__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any impact to other P&amp;Ls</inlineHelpText>
+        <label>Is there any impact to other P&amp;Ls</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_No_outstanding_Receipts__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>No outstanding Receipts/Invoices checked?</inlineHelpText>
+        <label>No outstanding Receipts/Invoice checked?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Notified_Legal_Sales_VP_Finance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the internal communication to Legal (ES General Counsel), Com Ops (VP Sales), Finance, Other P&amp;L’s,… been done ?</inlineHelpText>
+        <label>Legal, Com Ops, Finance, P&amp;L… informed?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_P_L_s_Channel_Leaders_Names__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide the name of P&amp;L’s channel leaders notified?</inlineHelpText>
+        <label>P&amp;L’s Channel Leaders Names</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Power_of_Attorney_if_required__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Power of Attorney, if required?</inlineHelpText>
+        <label>Power of Attorney, if required?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Recommendation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Recommendation</inlineHelpText>
+        <label>Recommendation</label>
+        <referenceTo>GE_PRM_Recommendation__c</referenceTo>
+        <relationshipLabel>Termination/Non-Renewal Checklists</relationshipLabel>
+        <relationshipName>Termination_Checklist</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Sales_Greater_than_100000_Detail__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, Please provide details</inlineHelpText>
+        <label>Sales Greater than 100000 Details</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Sales_Greater_than_100000__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Were sales greater than $100,000 for the last 12 months?</inlineHelpText>
+        <label>Sales Greater than 100000</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Termination/Non-Renewal Checklist Status</inlineHelpText>
+        <label>Termination/Non-Renewal Checklist Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Term_Comp_Integrity_Issue_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, please provide details</inlineHelpText>
+        <label>Termination Comp Integrity Issue Details</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Term_Compliance_Integrity_Issue__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Are we non-renewing/terminating for compliance/integrity issue?</inlineHelpText>
+        <label>Termination Compliance Integrity Issue</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_plan_to_cover_territory_in_future__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there a plan for covering this territory in the future ?</inlineHelpText>
+        <label>Plan for covering territory in future?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Termination/Non-Renewal Checklist</label>
+    <nameField>
+        <displayFormat>{0000000}</displayFormat>
+        <label>Termination Checklist #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Termination/Non-Renewal Checklists</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>GE_PRM_Termination_Checklist</fullName>
+        <active>true</active>
+        <description>Termination Checklist</description>
+        <label>Termination Checklist</label>
+        <picklistValues>
+            <picklist>GE_PRM_Additional_Red_Flags__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Agree_Expired_more_then_6_months__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_All_demo_equipment_returned_to_GE__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Chanel_has_othr_active_agreements__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Check_adverse_termination_laws__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Commissions_Paid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Cvrage_Plan_include_Contrct_Reltn__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_De_provisioned_any_systems_web__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Direct_indirect_strategy_changed__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Disputes_Claims_Settled__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_GE_Logo_cease_and_desist_notific__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_GE_Product_make_more_than_25__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_If_other_agreements_notified_P_Ls__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Inventory_buy_back_option__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Is_there_any_impact_to_other_P_Ls__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_No_outstanding_Receipts__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Notified_Legal_Sales_VP_Finance__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Power_of_Attorney_if_required__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Sales_Greater_than_100000__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Term_Compliance_Integrity_Issue__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_plan_to_cover_territory_in_future__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PRM_Termination_Checklist_Locked</fullName>
+        <active>true</active>
+        <description>Termination Checklist - Locked</description>
+        <label>Termination Checklist - Locked</label>
+        <picklistValues>
+            <picklist>GE_PRM_Additional_Red_Flags__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Agree_Expired_more_then_6_months__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_All_demo_equipment_returned_to_GE__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Chanel_has_othr_active_agreements__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Check_adverse_termination_laws__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Commissions_Paid__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Cvrage_Plan_include_Contrct_Reltn__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_De_provisioned_any_systems_web__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Direct_indirect_strategy_changed__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Disputes_Claims_Settled__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_GE_Logo_cease_and_desist_notific__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_GE_Product_make_more_than_25__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_If_other_agreements_notified_P_Ls__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Inventory_buy_back_option__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Is_there_any_impact_to_other_P_Ls__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_No_outstanding_Receipts__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Notified_Legal_Sales_VP_Finance__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Power_of_Attorney_if_required__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Sales_Greater_than_100000__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Term_Compliance_Integrity_Issue__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_plan_to_cover_territory_in_future__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>GE_PRM_Active_Agreement_Details</fullName>
+        <active>true</active>
+        <description>Val rule for Compl Val page of RfA</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Status__c ,&apos;Completed&apos;) ,
+ ISPICKVAL(GE_PRM_Chanel_has_othr_active_agreements__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_Active_Agreement_Details__c) 
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Active_Agreement_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Additional_Red_Flags_Details</fullName>
+        <active>true</active>
+        <description>Val rule for Compl Val page of RfA</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Status__c ,&apos;Completed&apos;) ,
+ ISPICKVAL(GE_PRM_Additional_Red_Flags__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_Additional_Red_Flags_Details__c) 
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Additional_Red_Flags__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Additional_Red_Flags_Details_yes</fullName>
+        <active>true</active>
+        <description>val rule for Comp val page on RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Compliance_Validation_Page__c , &apos;Completed&apos;) ,
+OR(
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+AND(
+ISPICKVAL(GE_PRM_Additional_Red_Flags__c,&apos;Yes&apos;) ,
+ ISBLANK(GE_PRM_Additional_Red_Flags_Details__c)  
+)
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Additional_Red_Flags_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Adverse_Termination_Laws_Details</fullName>
+        <active>true</active>
+        <description>Val rule for Compl Val page of RfA</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Status__c ,&apos;Completed&apos;) ,
+ ISPICKVAL(GE_PRM_Check_adverse_termination_laws__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_Adverse_Termination_Laws_Details__c) 
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Adverse_Termination_Laws_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Advrse_Trminatn_Laws_Details_yes</fullName>
+        <active>true</active>
+        <description>val rule for Comp val page on RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Compliance_Validation_Page__c , &apos;Completed&apos;) ,
+OR(
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)), 
+ ISPICKVAL(GE_PRM_Check_adverse_termination_laws__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_Adverse_Termination_Laws_Details__c	)  
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Adverse_Termination_Laws_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Agreement_Expired_6_months_Detail</fullName>
+        <active>true</active>
+        <description>Val rule for Compl Val page of RfA</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Status__c ,&apos;Completed&apos;) ,
+ ISPICKVAL(GE_PRM_Agree_Expired_more_then_6_months__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_Agreemnt_Expired_6_months_Details__c) 
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Agreemnt_Expired_6_months_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Cvrage_Plan_include_Contrct_Yes</fullName>
+        <active>true</active>
+        <description>Val rule for Marketing Page RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(  GE_PRM_Recommendation__r.GE_PRMMarketing_Strategy_Page__c ,&apos;Completed&apos;) ,
+OR( ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+ISPICKVAL(GE_PRM_Cvrage_Plan_include_Contrct_Reltn__c,&apos;Yes&apos;),
+ISBLANK(GE_PRM_Cvrg_Pln_includ_Cntrct_Rltn_dtail__c)
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Cvrg_Pln_includ_Cntrct_Rltn_dtail__c</errorDisplayField>
+        <errorMessage>Please provide details.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_GE_Product_make_25_Details_yes</fullName>
+        <active>true</active>
+        <description>Val Rule for Finance page on RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Finance_Page__c ,&apos;Completed&apos;) ,
+OR( ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+ ISPICKVAL(GE_PRM_GE_Product_make_more_than_25__c,&apos;Yes&apos;) ,
+ ISBLANK(GE_PRM_GE_Prod_make_more_than_25_Details__c	) 
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_GE_Prod_make_more_than_25_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Is_Compliance_Page_Completd_3</fullName>
+        <active>true</active>
+        <description>Val rule for Compliancepage for RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL(   GE_PRM_Recommendation__r.GE_PRM_Compliance_Page__c , &apos;Completed&apos;) ,
+OR(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+ ISPICKVAL(GE_PRM_Term_Compliance_Integrity_Issue__c,&apos;&apos;) 
+)</errorConditionFormula>
+        <errorMessage>This page is not yet complete. Please fill in all the manadatory(*) fields.....</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Is_Compliance_Val_Page_Completd_3</fullName>
+        <active>true</active>
+        <description>Val rule for Compliance Validation page for RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL(    GE_PRM_Recommendation__r.GE_PRM_Compliance_Validation_Page__c   , &apos;Completed&apos;) ,
+OR(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+OR( 
+ISPICKVAL(GE_PRM_Additional_Red_Flags__c,&apos;&apos;) ,
+ISPICKVAL(GE_PRM_Check_adverse_termination_laws__c,&apos;&apos;) ,
+ISPICKVAL(GE_PRM_Agree_Expired_more_then_6_months__c,&apos;&apos;) ,
+ ISPICKVAL(GE_PRM_Chanel_has_othr_active_agreements__c, &apos;&apos;) ,
+ ISBLANK(GE_PRM_Checklist_Comments__c) 
+)
+)</errorConditionFormula>
+        <errorMessage>This page is not yet complete. Please fill in all the manadatory(*) fields...</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Is_Finance_Page_Completd_3</fullName>
+        <active>true</active>
+        <description>Val rule for Finance page for RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL(  GE_PRM_Recommendation__r.GE_PRM_Finance_Page__c  , &apos;Completed&apos;) ,
+OR(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+OR(
+ ISPICKVAL(GE_PRM_Sales_Greater_than_100000__c,&apos;&apos;) ,
+ ISPICKVAL(GE_PRM_GE_Product_make_more_than_25__c,&apos;&apos;)
+) 
+)</errorConditionFormula>
+        <errorMessage>This page is not yet complete. Please fill in all the manadatory(*) fields..</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Is_Mktng_Strategy_Page_Completd_3</fullName>
+        <active>true</active>
+        <description>Val rule for Mktng page for RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRMMarketing_Strategy_Page__c , &apos;Completed&apos;) ,
+OR( ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+ ISPICKVAL(GE_PRM_Cvrage_Plan_include_Contrct_Reltn__c,&apos;&apos;) 
+)</errorConditionFormula>
+        <errorMessage>This page is not yet complete. Please fill in all the manadatory(*) fields.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Is_TerminationChkList_Completed</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL(GE_PRM_Recommendation__r.GE_PRM_Compliance_Validation_Page__c  , &apos;Completed&apos;),
+OR(ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c ,&apos;Termination&apos;),
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c ,&apos;Non-Renewal&apos;)
+),
+NOT(
+ISPICKVAL( GE_PRM_Status__c , &apos;Completed&apos;)
+)
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Status__c</errorDisplayField>
+        <errorMessage>Termination/Non-Renewal Checklist Status should be Completed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_PLs_Channel_Leaders_Names</fullName>
+        <active>true</active>
+        <description>Val rule for Compl Val page of RfA</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Status__c ,&apos;Completed&apos;) ,
+ ISPICKVAL(GE_PRM_Chanel_has_othr_active_agreements__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_P_L_s_Channel_Leaders_Names__c) 
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_P_L_s_Channel_Leaders_Names__c</errorDisplayField>
+        <errorMessage>Please provide the names of  the users notified?</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Sales_Greater_100000_Details_yes</fullName>
+        <active>true</active>
+        <description>Val rule for Finance Page RfA(Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Finance_Page__c ,&apos;Completed&apos;) ,
+OR( ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)),
+ ISPICKVAL(GE_PRM_Sales_Greater_than_100000__c,&apos;Yes&apos;),
+ ISBLANK(GE_PRM_Sales_Greater_than_100000_Detail__c	)  
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Sales_Greater_than_100000_Detail__c</errorDisplayField>
+        <errorMessage>Please provide details.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Termination_Check_Can_be_created</fullName>
+        <active>true</active>
+        <description>Termination/Non-Renewal Checklist can be created if the Recommendation Agreement Category = Renewal and Staus = Rejected or Recommendation Category =  Non Renewal / Termination.</description>
+        <errorConditionFormula>NOT(
+OR(
+AND(
+          ISPICKVAL(GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c,
+          &apos;Renewal&apos;),
+          ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Status__c ,&apos;Rejected&apos;)
+),
+
+ISPICKVAL(GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c,
+          &apos;Non-Renewal&apos;),
+
+ISPICKVAL(GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c,
+          &apos;Termination&apos;)
+)
+)</errorConditionFormula>
+        <errorMessage>Termination Checklist can not be created for this recommendation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Termination_Complete_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+ISPICKVAL(GE_PRM_Status__c, &apos;Completed&apos;),  
+OR(
+ISBLANK(GE_PRM_Checklist_Comments__c),
+OR(ISPICKVAL( GE_PRM_Chanel_has_othr_active_agreements__c , &apos;No&apos;),ISPICKVAL( GE_PRM_Chanel_has_othr_active_agreements__c , &apos;&apos;)) ,
+OR(ISPICKVAL( GE_PRM_Check_adverse_termination_laws__c , &apos;No&apos;),ISPICKVAL( GE_PRM_Check_adverse_termination_laws__c , &apos;&apos;)),   OR(ISPICKVAL(GE_PRM_Agree_Expired_more_then_6_months__c,&apos;No&apos;),ISPICKVAL(GE_PRM_Agree_Expired_more_then_6_months__c,&apos;&apos;)),
+OR( ISPICKVAL(GE_PRM_Additional_Red_Flags__c,&apos;No&apos;) , ISPICKVAL(GE_PRM_Additional_Red_Flags__c,&apos;No&apos;)) 
+ )
+ )</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Status__c</errorDisplayField>
+        <errorMessage>All fields must be marked as &quot;Yes&quot; OR &quot;Not Applicable&quot; in order to complete the Termination/Non Renewal Checklist</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Trmtn_Comp_Intgrty_Isue_Dtail_yes</fullName>
+        <active>true</active>
+        <description>Val rule for Compliance page on RfA (Termination)</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Compliance_Page__c ,&apos;Completed&apos;) ,
+ OR(
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Termination&apos;) ,
+ISPICKVAL( GE_PRM_Recommendation__r.GE_PRM_Agreement_Category__c , &apos;Non-Renewal&apos;)), 
+ISPICKVAL(GE_PRM_Term_Compliance_Integrity_Issue__c,&apos;Yes&apos;),
+ISBLANK(GE_PRM_Term_Comp_Integrity_Issue_Details__c)  
+)</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Term_Comp_Integrity_Issue_Details__c</errorDisplayField>
+        <errorMessage>Please provide details</errorMessage>
+    </validationRules>
+</CustomObject>

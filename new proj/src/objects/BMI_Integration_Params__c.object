@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>The SFDC - BMI integration parameters such as the SOAP XML, Endpoint, User credentials etc are stored in this custom setting</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>BMI_User_ID__c</fullName>
+        <description>The BM login user id which will be used to send the SFDC SOAP messages to BM</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The BM login user id which will be used to send the SFDC SOAP messages to BM</inlineHelpText>
+        <label>BMI User ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BMI_User_Pwd__c</fullName>
+        <description>BM Integration User&apos;s Password</description>
+        <externalId>false</externalId>
+        <inlineHelpText>BM Integration User&apos;s Password</inlineHelpText>
+        <label>BMI User Pwd</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Point_URL__c</fullName>
+        <description>BM End Point URL to which the SFDC SOAP Messges will be sent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>BM End Point URL to which the SFDC SOAP Messges will be sent</inlineHelpText>
+        <label>End Point URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Error_Email__c</fullName>
+        <description>Any BM integration errors will be sent to this email address.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any BM integration errors will be sent to this email address.</inlineHelpText>
+        <label>Error Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <label>BMI Integration Params</label>
+</CustomObject>

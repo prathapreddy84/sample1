@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Allow_Admin_Functions__c</fullName>
+        <description>Formula that determines if a user can see the review timesheet toolbar</description>
+        <externalId>false</externalId>
+        <formula>if(contains( FST_Lead_ID__c ,$User.Id),1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Allow Admin Functions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Download_to_iPad__c</fullName>
+        <externalId>false</externalId>
+        <formula>If (CONTAINS(  Related_User__c  , $User.Id ) &amp;&amp; ( End_Date__c &gt;= TODAY()-15), 1, 0)</formula>
+        <label>Download to iPad</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EditTimeEntryValid__c</fullName>
+        <externalId>false</externalId>
+        <formula>if((End_Date__c &gt;= Today() &amp;&amp; Start_Date__c&lt;= Today()), 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EditTimeEntryValid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FST_Lead_ID__c</fullName>
+        <description>Returns the user ID of the technician&apos;s manager.  Used to control visibility of the Timesheet Review toolbar</description>
+        <externalId>false</externalId>
+        <formula>IF( isblank( Technician__r.SVMXC__Salesforce_User__c ),&quot;NA&quot;,  Technician__r.SVMXC__Salesforce_User__r.Manager.Id)</formula>
+        <label>FST Lead ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Download_to_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND(
+  OR( 
+    AND( YEAR( Start_Date__c ) = YEAR( TODAY() ), MONTH( Start_Date__c ) &lt;= (MONTH( TODAY() ) + 1) )
+    ,
+    AND( YEAR( Start_Date__c ) = (YEAR( TODAY() ) - 1), MONTH( Start_Date__c ) &gt;= MONTH( TODAY() ) )
+  )
+  ,
+  AND(
+  NOT(ISBLANK($Setup.GE_DS_Tech_Assignment__c.GE_DS_Technician_ID__c)),
+  $Setup.GE_DS_Tech_Assignment__c.GE_DS_Technician_ID__c = Technician__r.Id)
+)</formula>
+        <label>Download to Mobile?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Timesheets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Prior_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Prior Status</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Total_Overtime__c</fullName>
+        <description>Tracks total overtime on timesheet.</description>
+        <externalId>false</externalId>
+        <label>Total Overtime</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Month_Driven__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(Start_Date__c )) &amp; if( LEN(TEXT(Month(Start_Date__c ))) =1,&quot;0&quot;&amp; Text(Month(Start_Date__c )),Text(Month(Start_Date__c )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month Driven</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>Technician__r.SVMXC__Salesforce_User__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Related User</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reviewed_by_FST_Lead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>FST Lead checks the box after completing the timesheet review at the end of the pay period</inlineHelpText>
+        <label>Reviewed by FST Lead</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Technician_Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Technician__r.SVMXC__Active__c = TRUE, &quot;Y&quot;, &quot;N&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technician Active</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technician_ID__c</fullName>
+        <description>Reflects the Unique ID required by Runzheimer reports</description>
+        <externalId>false</externalId>
+        <formula>Technician__r.GE_SM_HQ_SSO_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technician ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technician__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technician</label>
+        <referenceTo>SVMXC__Service_Group_Members__c</referenceTo>
+        <relationshipLabel>Timesheets</relationshipLabel>
+        <relationshipName>Timesheets_del</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Billable_Hours__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Billable Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Billable_On_Site_Time__c</fullName>
+        <description>Reflects the total billable time that is spent on site at a location</description>
+        <externalId>false</externalId>
+        <label>Total Billable On-Site Time</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Billable_Travel_Time__c</fullName>
+        <description>Reflects the total travel time for this time period that is flagged as billable</description>
+        <externalId>false</externalId>
+        <label>Total Billable Travel Time</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Hours__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Miles_Driven__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Total of all miles reported</description>
+        <externalId>false</externalId>
+        <label>Total Miles Driven</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Nonbillable_Hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Hours__c  -  Total_Billable_Hours__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Nonbillable Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Nonbillable_On_Site_time__c</fullName>
+        <description>Reflects the total number of hours in this time period that were spent on-site, but were not billable</description>
+        <externalId>false</externalId>
+        <label>Total Nonbillable On-Site time</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Nonbillable_Travel_Time__c</fullName>
+        <description>Reflects the total travel time for this time period that is not flagged as billable</description>
+        <externalId>false</externalId>
+        <label>Total Nonbillable Travel Time</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_Off__c</fullName>
+        <description>Total hours recorded for sick or vacation time</description>
+        <externalId>false</externalId>
+        <label>Total Time Off</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_Worked__c</fullName>
+        <description>Reflects the total number of nonbillable time that is not vacation or sick time</description>
+        <externalId>false</externalId>
+        <label>Total Time Worked</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Utilization__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Total_Hours__c &gt; 0 , Total_Billable_Hours__c  /  Total_Hours__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Utilization</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <label>Timesheet</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Start_Date__c</columns>
+        <columns>End_Date__c</columns>
+        <columns>Technician__c</columns>
+        <columns>Total_Time_Worked__c</columns>
+        <columns>Total_Miles_Driven__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2012</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>SANDIP_AL_All</fullName>
+        <booleanFilter>1 AND (2 OR 3 or 4)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Start_Date__c</columns>
+        <columns>End_Date__c</columns>
+        <columns>Technician__c</columns>
+        <columns>Total_Time_Worked__c</columns>
+        <columns>Total_Miles_Driven__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Start_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>12/31/2012</value>
+        </filters>
+        <filters>
+            <field>Technician__c</field>
+            <operation>contains</operation>
+            <value>Godo</value>
+        </filters>
+        <filters>
+            <field>Technician__c</field>
+            <operation>contains</operation>
+            <value>Sandip</value>
+        </filters>
+        <filters>
+            <field>Technician__c</field>
+            <operation>contains</operation>
+            <value>AL Technician</value>
+        </filters>
+        <label>SANDIP AL All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>TS-{0000000000}</displayFormat>
+        <label>Timesheet Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Timesheets</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>AL</fullName>
+        <active>true</active>
+        <label>AL</label>
+        <picklistValues>
+            <picklist>GE_OG_DS_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>D_S</fullName>
+        <active>true</active>
+        <label>D&amp;S</label>
+        <picklistValues>
+            <picklist>GE_OG_DS_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Technician__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Hours__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Billable_Hours__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Miles_Driven__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>End_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>GE_DS_Lock_Submitted_Timesheet</fullName>
+        <active>false</active>
+        <description>If a Timesheet has been submitted, it is locked to the Technician.</description>
+        <errorConditionFormula>($Profile.Name &lt;&gt; &apos;GE_DS_Titanium Dispatcher&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;GE_DS_Titanium Operations Support&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;GE_DS_Titanium Service Manager&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;GE_ES Developer&apos;) &amp;&amp;
+(
+(TEXT(PRIORVALUE(GE_OG_DS_Status__c)) = &quot;Submitted&quot; ||
+TEXT(PRIORVALUE(GE_OG_DS_Status__c)) = &quot;Approved&quot;) &amp;&amp;
+((TEXT(GE_OG_DS_Status__c) != &quot;New&quot;) || (TEXT(GE_OG_DS_Status__c) != &quot;&quot;))
+)</errorConditionFormula>
+        <errorMessage>A Timesheet cannot be edited after it has been submitted.</errorMessage>
+    </validationRules>
+</CustomObject>

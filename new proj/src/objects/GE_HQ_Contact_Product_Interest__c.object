@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a child object of contact to display all the products that a customer is interested in.</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>GE_ES_MCS_Product_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <picklist>
+            <controllingField>GE_OG_Tier4__c</controllingField>
+            <picklistValues>
+                <fullName>EC - SERVICE</fullName>
+                <controllingFieldValues>EDDY CURRENT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EC ACCESSORIES</fullName>
+                <controllingFieldValues>EDDY CURRENT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EC FLAW DETECTORS</fullName>
+                <controllingFieldValues>EDDY CURRENT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EC PROBES</fullName>
+                <controllingFieldValues>EDDY CURRENT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EC SOFTWARE</fullName>
+                <controllingFieldValues>EDDY CURRENT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EDDY CURRENT</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FILM - CHEMICALS</fullName>
+                <controllingFieldValues>FILM</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FILM - EQUIPMENT</fullName>
+                <controllingFieldValues>FILM</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FILM - SERVICE</fullName>
+                <controllingFieldValues>FILM</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FILM DARKROOM/PB/DWSCREEN</fullName>
+                <controllingFieldValues>FILM</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FIB/BOR</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HIGH END VIDEOPROBE</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LARGE DIAMETER</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LOW-RANGE VIDEOPROBE</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MID-RANGE VIDEOPROBE</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RVI-ISR</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RVI-PRODUCT SERVICE</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RVI-SOFTWARE</fullName>
+                <controllingFieldValues>RVI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - DEPOT REPAIRS</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - AGREEMENTS</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - FIELD INSTALLATION</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - FIELD SERVICE</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - RENTAL</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - SPARE PARTS</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - TRAINING SCHOOLS</fullName>
+                <controllingFieldValues>SERVICE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TM - EC SYSTEMS</fullName>
+                <controllingFieldValues>Testing Machine</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TM - SERVICE</fullName>
+                <controllingFieldValues>Testing Machine</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TM - SMALL SYSTEMS</fullName>
+                <controllingFieldValues>Testing Machine</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TM - UT PROBES</fullName>
+                <controllingFieldValues>Testing Machine</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TM - UT SYSTEMS</fullName>
+                <controllingFieldValues>Testing Machine</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - APPLICATIONS</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - CATALOG PROBES</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - HARDNESS</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - INSTALLED SENSORS</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - PORTABLE FLAW DETECTORS</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - SERVICE</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - SOFTWARE</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - STRESSTEL</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UT - THICKNESS</fullName>
+                <controllingFieldValues>ULTRASOUND</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD - DIGITAL XR IMAGING</fullName>
+                <controllingFieldValues>RADIOGRAPHY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD - PHOENIX</fullName>
+                <controllingFieldValues>RADIOGRAPHY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD - SERVICE</fullName>
+                <controllingFieldValues>RADIOGRAPHY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD - XR ANALYTICAL</fullName>
+                <controllingFieldValues>RADIOGRAPHY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD - XR GENERATORS</fullName>
+                <controllingFieldValues>RADIOGRAPHY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD - XR SYSTEMS</fullName>
+                <controllingFieldValues>RADIOGRAPHY</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CORIOLIS</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FLOW MISCELLANEOUS</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - CORIOLIS</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - FLOW</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ULTRASONIC GAS FLOW</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ULTRASONIC LIQUID FLOW</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VORTEX</fullName>
+                <controllingFieldValues>FLOW</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FLUE GAS ANALYSIS</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GAS OTHER</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUMIDITY TEST &amp; CAL</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INDUSTRIAL RH</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LASER</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOISTURE OTHER</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OXYGEN ANALYSIS</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - GAS &amp; MOISTURE</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADTS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CUSTOM QUARTZ</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FI620MCS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FI620PMS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INSTRUMENT</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NRC</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PIEZO RESISTIVE</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PORTABLE CALIBRATORS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE INDICATOR</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE INSTRUMENT</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE STANDARD</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE STANDARDS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE-ACCESSORIES</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE-MISC</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE-SOFTWARE</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RESONATING RPT</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE - PRESSURE</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEMPERATURE CALIBRATORS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TERPS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEST PUMPS</fullName>
+                <controllingFieldValues>PRESSURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TCI</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>THERMAL CONDUCTIVITY</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRACE MOISTURE</fullName>
+                <controllingFieldValues>GAS &amp; MOISTURE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_Contact_Product_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Product Interests</relationshipLabel>
+        <relationshipName>Product_Interests</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_SFDC_LEGACY_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC Legacy ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier4__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier 4</label>
+        <picklist>
+            <controllingField>GE_OG_Tier_3__c</controllingField>
+            <picklistValues>
+                <fullName>After Market Parts</fullName>
+                <controllingFieldValues>Wayne</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>After Market Services</fullName>
+                <controllingFieldValues>Wayne</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ATEX</fullName>
+                <controllingFieldValues>Measurement Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Becker</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consolodated</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dispensers - Fleet</fullName>
+                <controllingFieldValues>Wayne</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dispensers - Retail</fullName>
+                <controllingFieldValues>Wayne</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DPS</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EDDY CURRENT</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FILM</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FLOW</fullName>
+                <controllingFieldValues>Measurement Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forecourt Systems</fullName>
+                <controllingFieldValues>Wayne</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GAS &amp; MOISTURE</fullName>
+                <controllingFieldValues>Measurement Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Generator Control &amp; Protection</fullName>
+                <controllingFieldValues>Control Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hardware - Comm Test</fullName>
+                <controllingFieldValues>Bently Nevada</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hardware - Standard</fullName>
+                <controllingFieldValues>Bently Nevada</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Homeland Security</fullName>
+                <controllingFieldValues>Reuter Stokes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Humidity</fullName>
+                <controllingFieldValues>Advanced Sensors</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IPG</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Masoneilan</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MEMS</fullName>
+                <controllingFieldValues>Advanced Sensors</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meters &amp; Instruments</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mooney</fullName>
+                <controllingFieldValues>Flow &amp; Process Technologies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nuclear Power</fullName>
+                <controllingFieldValues>Reuter Stokes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parts</fullName>
+                <controllingFieldValues>Control Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plant Controls (DCS / BOP)</fullName>
+                <controllingFieldValues>Control Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power Generation</fullName>
+                <controllingFieldValues>Reuter Stokes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRESSURE</fullName>
+                <controllingFieldValues>Measurement Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Protimeter</fullName>
+                <controllingFieldValues>Advanced Sensors</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RADIOGRAPHY</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RVI</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service - Comm Test</fullName>
+                <controllingFieldValues>Bently Nevada</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services</fullName>
+                <controllingFieldValues>Control Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service - Standard</fullName>
+                <controllingFieldValues>Bently Nevada</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Software - Comm Test</fullName>
+                <controllingFieldValues>Bently Nevada</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Software - Standard</fullName>
+                <controllingFieldValues>Bently Nevada</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telaire</fullName>
+                <controllingFieldValues>Advanced Sensors</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Temperature</fullName>
+                <controllingFieldValues>Advanced Sensors</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Testing Machine</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Turbine Controls &amp; Protection</fullName>
+                <controllingFieldValues>Control Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ULTRASOUND</fullName>
+                <controllingFieldValues>Inspection Technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unit Controls &amp; Protection</fullName>
+                <controllingFieldValues>Control Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Validation</fullName>
+                <controllingFieldValues>Advanced Sensors</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Advanced Sensors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bently Nevada</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Control Solutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flow &amp; Process Technologies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inspection Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Measurement Solutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reuter Stokes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wayne</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Product Interest</label>
+    <nameField>
+        <displayFormat>PI-{000000}</displayFormat>
+        <label>Product Interest Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Interests</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PRM Object</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>GE_HQ_SFDC_LEGACY_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC Legacy ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Account_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Account plan name  linked to this section</inlineHelpText>
+        <label>Account Plan</label>
+        <referenceTo>GE_HQ_Account_Plan__c</referenceTo>
+        <relationshipLabel>Market Coverage</relationshipLabel>
+        <relationshipName>Product_Info</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Applicant_PL_Association_Tenure__c</fullName>
+        <description>How long has Applicant carried this Product Line/Service?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How long has Applicant carried this Product Line/Service?</inlineHelpText>
+        <label>Applicant ProductLine Association Tenure</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Appointment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Appointment Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Appointment Id</inlineHelpText>
+        <label>Appointment</label>
+        <referenceTo>GE_PRM_Appointment__c</referenceTo>
+        <relationshipLabel>Product Info</relationshipLabel>
+        <relationshipName>Product_Info</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Delete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Delete</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delete</inlineHelpText>
+        <label>Delete</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Estimated_GE_Share__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the % of GE Share you plan to achieve for this specific  product/market offering this year ?</inlineHelpText>
+        <label>Estimated GE Share %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Exclusive__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>As a channel partner, are you the exclusive provider for this specific  product/market offering</inlineHelpText>
+        <label>Exclusive ?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Expected_Sales_Year_1__c</fullName>
+        <description>Expected Sales Year 1 (USD thousands)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected Sales Year 1 (USD thousands)</inlineHelpText>
+        <label>Expected Sales Year 1 (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Expected_Sales_Year_2__c</fullName>
+        <description>Expected Sales Year 2 (USD thousands)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected Sales Year 2 (USD thousands)</inlineHelpText>
+        <label>Expected Sales Year 2 (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Manufacturer__c</fullName>
+        <description>Manufacturer:</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manufacturer:</inlineHelpText>
+        <label>Manufacturer</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Name_of_Country_of_Headquarters__c</fullName>
+        <description>Country of Headquarters</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country of Headquarters</inlineHelpText>
+        <label>Country of Headquarters</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_No_of_Years_Carried__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>As a channel partner, how long are you covering this specific  product/market offering ?</inlineHelpText>
+        <label># of Years Carried</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Of_Total_Activity__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the % of your activity you will dedicate to this specific product/market offering this year?</inlineHelpText>
+        <label>% of Total Activity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Prior_Year_Sales_Turnover_USD__c</fullName>
+        <description>Prior Year Sales/Turnover (thousand USD)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prior Year Sales/Turnover (thousand USD)</inlineHelpText>
+        <label>Prior Year Sales/Turnover (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Prior_Year_Sales__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Previous Year Orders for this specific product/market offering</inlineHelpText>
+        <label>PY Orders $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Product_Market_Offering__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Product/Market the channel partner can provide/serve to their customers.</inlineHelpText>
+        <label>Product/Market Offering</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Product_Service_Line__c</fullName>
+        <description>Product/Service Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product/Service Line</inlineHelpText>
+        <label>Product/Service Line</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Products_Services__c</fullName>
+        <description>Products/Services</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Products/Services</inlineHelpText>
+        <label>Products/Services</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_SAS__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Served Available Market = Market the external channel partner can serve with existing products, services &amp; resources for this specific product/market offering</inlineHelpText>
+        <label>SAS $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status</inlineHelpText>
+        <label>Status</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Targeted_End_Customer_Penetration__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the % of Penetration you plan to achieve with this specific  product/market offering with your current/new customers this year ?</inlineHelpText>
+        <label>Targeted End Customer Penetration %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Total_Available_Market__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Available Market: Total potential market for this product/market offering regardless of the capability to serve</inlineHelpText>
+        <label>TAM $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Product lines or Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expected Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Vertical_Industry__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Vertical Industry the channel partner can cover with the specific product/market offering</inlineHelpText>
+        <label>Vertical Industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cement and Building Materials</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chemical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data &amp; Communications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equipment &amp; Appliances</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harvesting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Metals Productions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mining</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Petrochemical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pulp, Paper, Wood and Textiles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transmission &amp; Distribution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Water and Wastewater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unconventional fuels (e.g. Heavy Oil)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_of_Total_Business_New__c</fullName>
+        <externalId>false</externalId>
+        <label>% of Total Business</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_of_Total_Business__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(GE_PRM_SAS__c &gt; 0, GE_PRM_Prior_Year_Sales__c / GE_PRM_SAS__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>What is the % of your Total business result you plan to achieve with this specific  product/market offering this year ?</inlineHelpText>
+        <label>% of GE Business</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <label>Market Coverage</label>
+    <nameField>
+        <displayFormat>P-{0000000}</displayFormat>
+        <label>Product Info Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Market Coverage</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Account_Plan_Is_Approved</fullName>
+        <active>true</active>
+        <description>If Account Plan is &apos;Approved&apos; user shouldn&apos;t be able to create or edit market coverage</description>
+        <errorConditionFormula>AND(AND( $Profile.Name &lt;&gt; &apos;GE_ES System Administrator&apos;, $Profile.Name &lt;&gt; &apos;System Administrator&apos;) ,ISPICKVAL( GE_PRM_Account_Plan__r.GE_PRM_Status__c , &apos;Approved&apos;))</errorConditionFormula>
+        <errorMessage>You cannot create/edit Market Coverage since Account Plan is Approved</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Expected_Sales</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Expected Sales&apos;), OR(GE_PRM_Product_Service_Line__c = &apos;&apos;, GE_PRM_Product_Service_Line__c = null))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Product_Service_Line__c</errorDisplayField>
+        <errorMessage>You must enter Product/Service Line</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Expected_Sales_Expected_Sales_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Expected Sales&apos;), OR(GE_PRM_Expected_Sales_Year_1__c == null, ISBLANK(GE_PRM_Expected_Sales_Year_1__c)))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Expected_Sales_Year_1__c</errorDisplayField>
+        <errorMessage>You must enter Expected Sales Year 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Expected_Sales_Expected_Sales_2</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Expected Sales&apos;), OR(GE_PRM_Expected_Sales_Year_2__c == null, ISBLANK(GE_PRM_Expected_Sales_Year_2__c)))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Expected_Sales_Year_2__c</errorDisplayField>
+        <errorMessage>You must enter Expected Sales Year 2</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Product_Line</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Product lines or Services&apos;), OR( GE_PRM_Manufacturer__c = &apos;&apos;, GE_PRM_Manufacturer__c = null))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Manufacturer__c</errorDisplayField>
+        <errorMessage>You must enter Manufacturer</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Product_Line_HeadQuarters_Require</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Product lines or Services&apos;), ISBLANK(GE_PRM_Name_of_Country_of_Headquarters__c))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Name_of_Country_of_Headquarters__c</errorDisplayField>
+        <errorMessage>You must enter Manufacturer&apos;s Headquarters</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Product_Line_Prior_Year_Sales</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Product lines or Services&apos;), OR(GE_PRM_Prior_Year_Sales_Turnover_USD__c == null, ISBLANK(GE_PRM_Prior_Year_Sales_Turnover_USD__c )))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Prior_Year_Sales_Turnover_USD__c</errorDisplayField>
+        <errorMessage>You must enter Prior Year Sales/Turnover</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Product_Line_Product_Services</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Product lines or Services&apos;), OR( GE_PRM_Products_Services__c = &apos;&apos;, GE_PRM_Products_Services__c = null))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Products_Services__c</errorDisplayField>
+        <errorMessage>You must enter Products/Services</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Product_Line_Tenure</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(GE_PRM_Delete__c = false, ISPICKVAL( GE_PRM_Type__c ,&apos;Product lines or Services&apos;), OR(GE_PRM_Applicant_PL_Association_Tenure__c == null, ISBLANK(GE_PRM_Applicant_PL_Association_Tenure__c )))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Applicant_PL_Association_Tenure__c</errorDisplayField>
+        <errorMessage>You must enter Number of Years Carried ?</errorMessage>
+    </validationRules>
+</CustomObject>

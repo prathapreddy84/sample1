@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>GE_PRM_AFA_Approval_Edit_Override</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PRM Object</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>DOA_Cycle_Time_by_Approver__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_PRM_DOA_Approved_Rejected_Time_Stamp__c  -  CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DOA Cycle Time by Approver</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_Credit_limit__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Appointment__c</fullName>
+        <description>This is master look up field</description>
+        <externalId>false</externalId>
+        <label>Appointment</label>
+        <referenceTo>GE_PRM_Appointment__c</referenceTo>
+        <relationshipLabel>Appointment Approvals</relationshipLabel>
+        <relationshipName>Appointment_Approvals</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Approver_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_PRM_Approvers__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approver Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Approvers__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approvers</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Appointment_Approvals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_CM_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Manager Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments</inlineHelpText>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_DOA_Approved_Rejected_Time_Stamp__c</fullName>
+        <externalId>false</externalId>
+        <label>DOA Approved/Rejected Time Stamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Delegated_User_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_PRM_Delegated_User__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Delegated User Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Delegated_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Delegated User of the Approver</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delegated User of the Approver</inlineHelpText>
+        <label>Delegated User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Appointment_Approvals_Delegated</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_I_Understand__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>I Understand</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_If_yes_provide_payment_terms__c</fullName>
+        <externalId>false</externalId>
+        <label>If yes please provide the payment terms</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Is_Approver_Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( GE_PRM_Approvers__r.IsActive, &apos;true&apos; , &apos;false&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Approver Active?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Is_Delegated_Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( GE_PRM_Delegated_User__r.IsActive , &apos;true&apos;,&apos;false&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Delegated Active ?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Is_there_a_credit_limit_needed__c</fullName>
+        <externalId>false</externalId>
+        <label>Is there a credit limit needed?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Region__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Region</inlineHelpText>
+        <label>Region</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Response_to_above_ques_credit_lim__c</fullName>
+        <externalId>false</externalId>
+        <label>Response to the above question</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Response_to_above_ques_pay_terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Response to the above question</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Status_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Status</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Need More Info</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Additional Information Provided</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_Sub_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Additional Information Provided</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_payment_Terms_requested__c</fullName>
+        <externalId>false</externalId>
+        <label>What are the payment Terms requested?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PRM_payment_terms_Non_Stand__c</fullName>
+        <externalId>false</externalId>
+        <label>Are the payment terms &quot;Non-Standard&quot;?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Legacy_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC Legacy ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Appointment Approval</label>
+    <nameField>
+        <displayFormat>AA-{0000}</displayFormat>
+        <label>Appointment Approval Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Appointment Approvals</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>GE_PRM_Approval</fullName>
+        <active>true</active>
+        <label>Approval</label>
+        <picklistValues>
+            <picklist>GE_PRM_Is_there_a_credit_limit_needed__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need More Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Sub_Status__c</picklist>
+            <values>
+                <fullName>Additional Information Provided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_payment_terms_Non_Stand__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PRM_Finance_Approval</fullName>
+        <active>true</active>
+        <label>Finance Approval</label>
+        <picklistValues>
+            <picklist>GE_PRM_Is_there_a_credit_limit_needed__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need More Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_Sub_Status__c</picklist>
+            <values>
+                <fullName>Additional Information Provided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PRM_payment_terms_Non_Stand__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>GE_PRM_Comments_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( GE_PRM_I_Understand__c = TRUE,  ISPICKVAL( GE_PRM_Status__c , &apos;Rejected&apos;), ISBLANK(GE_PRM_Comments__c ))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Comments__c</errorDisplayField>
+        <errorMessage>Please provide Comments</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_CreditLimit_Response_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL(GE_PRM_Is_there_a_credit_limit_needed__c, &apos;Yes&apos;), ISBLANK( GE_Credit_limit__c ) )</errorConditionFormula>
+        <errorDisplayField>GE_Credit_limit__c</errorDisplayField>
+        <errorMessage>Please provide Credit Limit</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_I_Understand_is_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL( GE_PRM_Status__c , &apos;Rejected&apos;),
+GE_PRM_I_Understand__c = FALSE )</errorConditionFormula>
+        <errorDisplayField>GE_PRM_I_Understand__c</errorDisplayField>
+        <errorMessage>I understand that if this Appointment Approval is rejected, it will not be reversible.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Is_there_credit_limit_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( RecordType.DeveloperName =&apos;GE_PRM_Finance_Approval&apos;,  ISPICKVAL( GE_PRM_Status__c , &apos;Approved&apos;), 
+ISPICKVAL( GE_PRM_Is_there_a_credit_limit_needed__c , &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_Is_there_a_credit_limit_needed__c</errorDisplayField>
+        <errorMessage>Please provide the information</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Non_Std_payment_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( RecordType.DeveloperName =&apos;GE_PRM_Finance_Approval&apos;,  ISPICKVAL( GE_PRM_Status__c , &apos;Approved&apos;), 
+ISPICKVAL( GE_PRM_payment_terms_Non_Stand__c , &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_payment_terms_Non_Stand__c</errorDisplayField>
+        <errorMessage>Please provide the information</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_PaymtTerms_CreditLmt_section_Req</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( RecordType.DeveloperName =&apos;GE_PRM_Finance_Approval&apos;,  ISPICKVAL( GE_PRM_Status__c , &apos;Approved&apos;), 
+ISBLANK( GE_PRM_payment_Terms_requested__c ))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_payment_Terms_requested__c</errorDisplayField>
+        <errorMessage>Please provide the information</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GE_PRM_Response_Provide_PaymentTerms_req</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL(GE_PRM_payment_terms_Non_Stand__c, &apos;Yes&apos;), 
+ISBLANK( GE_PRM_If_yes_provide_payment_terms__c ))</errorConditionFormula>
+        <errorDisplayField>GE_PRM_If_yes_provide_payment_terms__c</errorDisplayField>
+        <errorMessage>Please provide the Payment Terms</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Work_Details__c=&apos;&apos;,Text(Activity__c ),Text(Work_Details__r.SVMXC__Activity_Type__c) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Activity Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Troubleshooting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Install/Replace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inspect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standby</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CDB Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Associated_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The customer account associated with this time entry</description>
+        <externalId>false</externalId>
+        <label>Associated Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Time Entries</relationshipLabel>
+        <relationshipName>Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Calculated_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>ROUND(Total_Time__c ,2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Calculated Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>California_Break_Time__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used by tech to document that a reported time entry reflects California break time</description>
+        <externalId>false</externalId>
+        <label>California Break Time</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Create_Event__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Create Event</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Current_Employment_Status__c</fullName>
+        <description>Reflects the technician&apos;s employment status when the time entry record is created.  Populated by workflow if employment status has changed date of change is earlier than today</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reflects the technician&apos;s employment status when the time entry record is created.  Populated by workflow if employment status has changed date of change is earlier than today</inlineHelpText>
+        <label>Current Employment Status</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Time_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Not(Contains(Text( Activity__c ),&apos;Travel&apos;)), 1 ,0)</formula>
+        <label>Customer Time Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Not(Contains(Text( Activity__c ),&apos;Travel&apos;)), Total_Time__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Download_to_iPad__c</fullName>
+        <externalId>false</externalId>
+        <formula>If (CONTAINS( Related_User__c , $User.Id ), 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Download to iPad</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date_Search__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text( End_Date_Time__c )</formula>
+        <label>End Date (Search)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date/Time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>FixedValue1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;FH&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FixedValue1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FixedValue2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;1&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FixedValue2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FixedValue3__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;2002&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FixedValue3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FixedValue4__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;9902&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FixedValue4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_AL_Time_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Regular Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Overtime</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_CDB_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>CDB Other</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_DS_CDB_Type__c</fullName>
+        <description>Used to track categories of CDB.</description>
+        <externalId>false</externalId>
+        <label>CDB Type</label>
+        <picklist>
+            <controllingField>Activity__c</controllingField>
+            <picklistValues>
+                <fullName>Base - Office</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Comp Time</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vacation</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Holiday</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sick Leave</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Call</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Job Training</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Classroom Training</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Onshore</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Immigration Processing</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>CDB Time</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Download_to_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND(
+ NOT(ISBLANK(Timesheet__c)),
+ Timesheet__r.GE_DS_Download_to_Mobile__c = true
+)</formula>
+        <label>Download to Mobile?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Overtime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to indicate if Time Entry is Overtime.</description>
+        <externalId>false</externalId>
+        <label>Overtime</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_RecordTypeName__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GE_DS_RecordTypeName</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATEVALUE(Start_Date_Time__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Work_Description__c</fullName>
+        <description>Used to track work performed for use on Service Report.</description>
+        <externalId>false</externalId>
+        <label>Work Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_DS_Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Work Order</label>
+        <referenceTo>SVMXC__Service_Order__c</referenceTo>
+        <relationshipLabel>Time Entries</relationshipLabel>
+        <relationshipName>Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Bonus_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  GE_OG_DS_Bonus_Rate_Type__c = &apos;Daily&apos;,  GE_OG_DS_Bonus_Rate__c *  GE_OG_DS_Total_Days__c , GE_OG_DS_Bonus_Rate__c * Total_Time__c ) +  GE_OG_DS_Premium_Holiday_Bonus__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bonus Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Bonus_Applicable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bonus Applicable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Bonus_Rate_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( NOT(ISBLANK(TEXT(Technician__r.GE_OG_DS_Bonus_Rate_Type__c))), TEXT( Technician__r.GE_OG_DS_Bonus_Rate_Type__c ), &apos;Daily&apos;)</formula>
+        <label>Bonus Rate Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Bonus_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonus Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Premium_Holiday_Bonus__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium/Holiday Bonus</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Technician__r.SVMCX_Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_DS_Total_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Include_in_Search__c</fullName>
+        <externalId>false</externalId>
+        <formula>if((Download_to_iPad__c = 1 &amp;&amp;  Start_Date_Time__c &gt;= datetimevalue(TODAY() - 28)), 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include in Search</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Billable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Boolean indicating if a time entry is billable or not</description>
+        <externalId>false</externalId>
+        <label>Is Billable?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Labor_Rate__c</fullName>
+        <defaultValue>15.00</defaultValue>
+        <description>Average labor rate for reactive service calls</description>
+        <externalId>false</externalId>
+        <label>Labor Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Mileage_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Miles_Driven__c * Mileage_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mileage Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mileage_Rate__c</fullName>
+        <defaultValue>0.45</defaultValue>
+        <externalId>false</externalId>
+        <label>Mileage Rate</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Miles_Driven__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Entry for miles driven during the course of service or non-service related work time</description>
+        <externalId>false</externalId>
+        <label>Miles Driven</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Miles_Reported__c</fullName>
+        <externalId>false</externalId>
+        <formula>Round( Miles_Driven__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Miles Reported</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_Driven__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR( DATEVALUE( Start_Date_Time__c ))) &amp; if( LEN(TEXT(Month(DATEVALUE(Start_Date_Time__c )))) =1,&quot;0&quot;&amp; Text(Month(DATEVALUE(Start_Date_Time__c ))),Text(Month(DATEVALUE(Start_Date_Time__c ))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month Driven</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Only_For_Working_Hours__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Only For Working Hours</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Payroll_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(YEAR( DATEVALUE(End_Date_Time__c) )) &amp; if(len(text(Month(datevalue(End_Date_Time__c))))=1,&quot;0&quot; &amp; text(Month(datevalue(End_Date_Time__c))),text(Month(datevalue(End_Date_Time__c))))&amp;
+if(len(text(Day(datevalue(End_Date_Time__c))))=1,&quot;0&quot;&amp; text(Day(datevalue(End_Date_Time__c))),text(Day(datevalue(End_Date_Time__c))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payroll_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(YEAR( DATEVALUE(Start_Date_Time__c) )) &amp; if(len(text(Month(datevalue(Start_Date_Time__c))))=1,&quot;0&quot; &amp; text(Month(datevalue(Start_Date_Time__c))),text(Month(datevalue(Start_Date_Time__c))))&amp;
+if(len(text(Day(datevalue(Start_Date_Time__c))))=1,&quot;0&quot;&amp; text(Day(datevalue(Start_Date_Time__c))),text(Day(datevalue(Start_Date_Time__c))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Account__c</fullName>
+        <description>Renders the account associated with the time entry as a hyperlink</description>
+        <externalId>false</externalId>
+        <formula>IF( Work_Details__c =&quot;&quot;,
+
+    IF(Associated_Account__c =&quot;&quot;,
+
+          HYPERLINK(&quot;%2F0016000000mq97X&quot;,&quot;*Not Customer Specific&quot;),
+
+          HYPERLINK(&quot;%2F&quot;&amp;Associated_Account__c ,  Associated_Account__r.Name)),
+
+		HYPERLINK(&quot;%2F&quot;&amp; Work_Details__r.SVMXC__Service_Order__r.SVMXC__Company__c,Work_Details__r.SVMXC__Service_Order__r.SVMXC__Company__r.Name))</formula>
+        <label>Related Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>Technician__r.SVMXC__Salesforce_User__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Related User</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC_Warnings__c</fullName>
+        <externalId>false</externalId>
+        <label>Warnings</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Select__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Select</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Set_All_Day__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Set All Day</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date_Search__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Start_Date_Time__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Date (Search)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date/Time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Technician__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technician</label>
+        <referenceTo>SVMXC__Service_Group_Members__c</referenceTo>
+        <relationshipLabel>Time Entries</relationshipLabel>
+        <relationshipName>Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Timesheet__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Timesheet</label>
+        <referenceTo>SVMXC_Timesheet__c</referenceTo>
+        <relationshipLabel>Time Entries</relationshipLabel>
+        <relationshipName>Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Travel_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Miles_Driven__c /Total_Time__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Travel Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Travel_Time_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Contains(Text( Activity__c ),&apos;Travel&apos;), 1 ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Travel Time Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Travel_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( contains(TEXT(Activity__c),&apos;Travel&apos;), Total_Time__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Travel Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Details__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Work Details</label>
+        <referenceTo>SVMXC__Service_Order_Line__c</referenceTo>
+        <relationshipLabel>Time Entries</relationshipLabel>
+        <relationshipName>Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>If (Begins(TEXT(Activity__c),&quot;Work Detail&quot;), Work_Details__r.SVMXC__Service_Order__r.Name, &quot;N/A&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Order Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Time Entry</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Comments__c</columns>
+        <columns>Timesheet__c</columns>
+        <columns>Related_Account__c</columns>
+        <columns>Activity__c</columns>
+        <columns>Technician__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Total_Time__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TE-{0000000000}</displayFormat>
+        <label>Time Entry Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Time Entries</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>AL</fullName>
+        <active>true</active>
+        <label>AL</label>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Inspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Install%2FReplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standby</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troubleshooting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_AL_Time_Type__c</picklist>
+            <values>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overtime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Time</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_DS_CDB_Type__c</picklist>
+            <values>
+                <fullName>Base - Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comp Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Immigration Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Job Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onshore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sick Leave</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>D_S</fullName>
+        <active>true</active>
+        <label>D&amp;S</label>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>CDB Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Install%2FReplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standby</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troubleshooting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_AL_Time_Type__c</picklist>
+            <values>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overtime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Time</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_DS_CDB_Type__c</picklist>
+            <values>
+                <fullName>Base - Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comp Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Immigration Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Job Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onshore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sick Leave</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Activity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>End_Date_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Miles_Driven__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Is_Billable__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Timesheet__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Activity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Details__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Start_Date_Time__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>End_Date_Time__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Miles_Driven__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Timesheet__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_Time__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Activity__c</searchFilterFields>
+        <searchFilterFields>Related_Account__c</searchFilterFields>
+        <searchFilterFields>Work_Details__c</searchFilterFields>
+        <searchFilterFields>Start_Date_Time__c</searchFilterFields>
+        <searchFilterFields>End_Date_Time__c</searchFilterFields>
+        <searchFilterFields>Miles_Driven__c</searchFilterFields>
+        <searchFilterFields>Total_Time__c</searchFilterFields>
+        <searchResultsAdditionalFields>Activity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Technician__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date_Time__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>End_Date_Time__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Time__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>GE_DS_Lock_Submitted_Timesheet_Entry</fullName>
+        <active>true</active>
+        <errorConditionFormula>($Profile.Name &lt;&gt; &apos;GE_DS_Titanium Dispatcher&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;GE_DS_Titanium Operations Support&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;GE_DS_Titanium Service Manager&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;GE_ES Developer&apos;) &amp;&amp; 
+( 
+( Timesheet__r.GE_DS_Prior_Status__c  = &quot;Submitted&quot; || 
+Timesheet__r.GE_DS_Prior_Status__c = &quot;Approved&quot;) &amp;&amp; 
+((GE_OG_DS_Status__c != &quot;New&quot;) || (GE_OG_DS_Status__c != &quot;&quot;)) 
+)</errorConditionFormula>
+        <errorMessage>A Time Entry cannot be added or modified after the Timesheet is approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SVMX_Ensure_Start_Time_Before_End_Time</fullName>
+        <active>true</active>
+        <description>Prevent negative entries on time entries by ensuring that start time is before end time</description>
+        <errorConditionFormula>End_Date_Time__c &lt;= Start_Date_Time__c</errorConditionFormula>
+        <errorDisplayField>Activity__c</errorDisplayField>
+        <errorMessage>Your start date and time must be earlier than your end date and time</errorMessage>
+    </validationRules>
+</CustomObject>

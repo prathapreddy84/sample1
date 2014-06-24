@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Consultant_to_Project__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This filed is created fro R-6998</description>
+        <externalId>false</externalId>
+        <label>Consultant to Project</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_SFDC_LEGACY_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC Legacy ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GE_PW_3rd_Party_Rep__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>3rd Party Rep</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Key Players</relationshipLabel>
+        <relationshipName>Deal_Structure</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Asset_Mgt__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Asset Mgt</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Buyer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Buyer</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_CMU__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CMU</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_CSA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CSA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Depot__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Depot</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Developer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Developer</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_EPC_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>EPC Role</label>
+        <picklist>
+            <controllingField>GE_PW_EPC__c</controllingField>
+            <picklistValues>
+                <fullName>Influencer</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consortium Partner</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Buyer</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_EPC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>EPC</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Electrical_BOP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Electrical BOP</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_End_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>End User</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Engineering__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Engineering</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Equipment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Equipment</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Equity_Ownership__c</fullName>
+        <externalId>false</externalId>
+        <label>% Equity Ownership</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Equity_Provider__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Equity Provider</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_GAS_Byr_Agt__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Buyer&apos;s Agent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_GAS_Slr_Agt__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Seller&apos;s Agent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_In_Partnership_Consortium__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>In Partnership/Consortium</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Installation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Installation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_LeglEntity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal Entity</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Mechanical_BOP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mechanical BOP</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_O_M__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>O &amp; M</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Key Players</relationshipLabel>
+        <relationshipName>Deal_Structure</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Parts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Parts</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Power_Purchaser__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Power Purchaser</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Prime_Contr__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Prime Contr</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_SOL_Intgrtr__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Integrator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_SOL_Inv_Sup__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Inverter Supplier</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_SOL_Mod_Sup__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Module Supplier</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Sales_Agent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Agent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Sub_to_Major_Sub__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sub to Major Sub</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_Sub_to_Prime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sub to Prime</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_TAs_TDA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TA&apos;s/TDA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_TM_Rental__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TM Rental</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WIWS_Inf__c</fullName>
+        <externalId>false</externalId>
+        <label>Information</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WIWS_KPC__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Key Player Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Key Players</relationshipLabel>
+        <relationshipName>Key_Players</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WIWS_KR__c</fullName>
+        <externalId>false</externalId>
+        <label>Key Roles</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>O&amp;M Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Owner’s Engineer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WIWS_PS__c</fullName>
+        <externalId>false</externalId>
+        <label>Key Contracting Relationship</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Partnership/Consortium?</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prime Contractor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WIWS_SP__c</fullName>
+        <externalId>false</externalId>
+        <label>Scope Provided</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TA’s/TDA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WS_AI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Auto Insert</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_WS_Technical_operator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Technical operator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_PW_influencer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Influencer</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MEP_Consultant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is created for R-6998</description>
+        <externalId>false</externalId>
+        <label>MEP Consultant</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>influencer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>influencer</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Key Player</label>
+    <nameField>
+        <displayFormat>KP-{0}</displayFormat>
+        <label>KP Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Key Players</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>GE_PW_Aero_Key_Player</fullName>
+        <active>true</active>
+        <label>GE PW Aero Key Player</label>
+        <picklistValues>
+            <picklist>GE_PW_EPC_Role__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_KR__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%26M Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner%E2%80%99s Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_PS__c</picklist>
+            <values>
+                <fullName>In Partnership%2FConsortium%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_SP__c</picklist>
+            <values>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA%E2%80%99s%2FTDA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PW_Key_Player</fullName>
+        <active>true</active>
+        <description>GE PW Key Player</description>
+        <label>GE PW Key Player</label>
+        <picklistValues>
+            <picklist>GE_PW_EPC_Role__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_KR__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%26M Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner%E2%80%99s Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_PS__c</picklist>
+            <values>
+                <fullName>In Partnership%2FConsortium%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_SP__c</picklist>
+            <values>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA%E2%80%99s%2FTDA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PW_Solar_Key_Player</fullName>
+        <active>true</active>
+        <label>GE PW Solar Key Player</label>
+        <picklistValues>
+            <picklist>GE_PW_EPC_Role__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_KR__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%26M Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner%E2%80%99s Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_PS__c</picklist>
+            <values>
+                <fullName>In Partnership%2FConsortium%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_SP__c</picklist>
+            <values>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA%E2%80%99s%2FTDA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PW_Thermal_Key_Player</fullName>
+        <active>true</active>
+        <label>GE PW Thermal Key Player</label>
+        <picklistValues>
+            <picklist>GE_PW_EPC_Role__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_KR__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%26M Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner%E2%80%99s Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_PS__c</picklist>
+            <values>
+                <fullName>In Partnership%2FConsortium%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_SP__c</picklist>
+            <values>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA%E2%80%99s%2FTDA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PW_WS_Key_Player</fullName>
+        <active>true</active>
+        <label>GE PW Wind Services Key Player</label>
+        <picklistValues>
+            <picklist>GE_PW_EPC_Role__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_KR__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%26M Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner%E2%80%99s Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_PS__c</picklist>
+            <values>
+                <fullName>In Partnership%2FConsortium%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_SP__c</picklist>
+            <values>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA%E2%80%99s%2FTDA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_PW_Wind_Equipment_Key_Player</fullName>
+        <active>true</active>
+        <label>GE PW Wind Equipment  Key Player</label>
+        <picklistValues>
+            <picklist>GE_PW_EPC_Role__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consortium Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_KR__c</picklist>
+            <values>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equity Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JV Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licensor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%26M Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner%E2%80%99s Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power Purchaser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_PS__c</picklist>
+            <values>
+                <fullName>In Partnership%2FConsortium%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Major Sub</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub to Prime</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_PW_WIWS_SP__c</picklist>
+            <values>
+                <fullName>Electrical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical BOP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA%E2%80%99s%2FTDA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>GE_PW_Equity_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(GE_PW_Equity_Ownership__c  &gt; 1, GE_PW_Equity_Ownership__c &lt; 0)</errorConditionFormula>
+        <errorDisplayField>GE_PW_Equity_Ownership__c</errorDisplayField>
+        <errorMessage>% equity should not exceed 100 and should not be less than zero</errorMessage>
+    </validationRules>
+</CustomObject>

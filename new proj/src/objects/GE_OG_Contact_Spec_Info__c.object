@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used to store Contact Specific Information as Related list</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>GE_OG_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact Specific Information</relationshipLabel>
+        <relationshipName>Contact_Specific_Information</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Prmry_Cntct__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Promotion__c</fullName>
+        <externalId>false</externalId>
+        <label>Promotion</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Invite - African American Forum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - Womens Network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - Minds &amp; Machines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - City Swings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - CEO Roundtable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - M&amp;C Customer Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - GE Customer Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - National Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - Local Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invite - Crotonville</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing - Price/Product Updates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing - Account Primary Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier1_PL__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier 1 P&amp;L</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Oil &amp; Gas (O&amp;G)</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier2_PL__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier 2 P&amp;L</label>
+        <picklist>
+            <controllingField>GE_OG_Tier1_PL__c</controllingField>
+            <picklistValues>
+                <fullName>PII Pipeline Solutions</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Measurement &amp; Control (M&amp;C)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drilling &amp; Surface (D&amp;S)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Subsea (SS)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TMS</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DTS</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lufkin</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier3_PL__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier 3 P&amp;L</label>
+        <picklist>
+            <controllingField>GE_OG_Tier2_PL__c</controllingField>
+            <picklistValues>
+                <fullName>Advanced Sensors</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Automation</fullName>
+                <controllingFieldValues>Lufkin</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bently Nevada</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Blower &amp; Comp.</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Control Solutions</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - AL</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - Drilling</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - DT</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - Logging</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - PC</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOS-Installation</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOS-New Units</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOS - Opex Core</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOS - Opex CS</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOS - Service Multi P&amp;Ls</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOS - Upgrades</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flow &amp; Process Technologies (Dresser)</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Line Inspection</fullName>
+                <controllingFieldValues>PII Pipeline Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inspection Technologies</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installation</fullName>
+                <controllingFieldValues>TMS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integrity Services</fullName>
+                <controllingFieldValues>PII Pipeline Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Measurement Solutions</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Units</fullName>
+                <controllingFieldValues>TMS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oilfield</fullName>
+                <controllingFieldValues>Lufkin</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opex - Core</fullName>
+                <controllingFieldValues>TMS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opex - CS</fullName>
+                <controllingFieldValues>TMS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power Transmission</fullName>
+                <controllingFieldValues>Lufkin</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reuter Stokes</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salof</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Multi P&amp;Ls</fullName>
+                <controllingFieldValues>TMS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Offshore</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Services</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Subsea</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Well Stream</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unconventional</fullName>
+                <controllingFieldValues>DTS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrades</fullName>
+                <controllingFieldValues>TMS</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wayne</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Contact Specific Information</label>
+    <nameField>
+        <displayFormat>CSI-{000000}</displayFormat>
+        <label>Contact Specific Information Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contact Specific Information</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Business_Tier_11__c</fullName>
+        <externalId>false</externalId>
+        <label>Business - Tier 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Tier_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Business - Tier 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Tier_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Business - Tier 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Yes_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Default? Yes?No</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Live_Yes_No__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Live? Yes/No</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Business_Tier_Relation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Tier</label>
+        <referenceTo>GE_HQ_P_L__c</referenceTo>
+        <relationshipLabel>BusinessTierSubscribedObject</relationshipLabel>
+        <relationshipName>BusinessTierSubscribedObject</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>KYCLookup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>KYC</label>
+        <referenceTo>GE_PRM_KYC_Termination_Checklist__c</referenceTo>
+        <relationshipName>BusinessTierObject</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LEGACY_SYSTEM__c</fullName>
+        <externalId>false</externalId>
+        <label>LEGACY SYSTEM</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ORG_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>ORG ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ORG_NAME__c</fullName>
+        <externalId>false</externalId>
+        <label>ORG NAME</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAP_ORACLE__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP/ORACLE</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tier1__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Oil &amp; Gas (O&amp;G)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tier2__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier2</label>
+        <picklist>
+            <controllingField>Tier1__c</controllingField>
+            <picklistValues>
+                <fullName>Measurement &amp; Control (M&amp;C)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drilling &amp; Surface (D&amp;S)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global Services (GS)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PII Pipeline Solutions</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Turbo Machinery</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Subsea (SS)</fullName>
+                <controllingFieldValues>Oil &amp; Gas (O&amp;G)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tier3__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier3</label>
+        <picklist>
+            <controllingField>Tier2__c</controllingField>
+            <picklistValues>
+                <fullName>Advanced Sensors</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bently Nevada</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Control Solutions</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inspection Technologies</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reuter Stokes</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flow &amp; Process Technologies (Dresser)</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wayne</fullName>
+                <controllingFieldValues>Measurement &amp; Control (M&amp;C)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - Drilling</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - PC</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - AL</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - DT</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D&amp;S - Logging</fullName>
+                <controllingFieldValues>Drilling &amp; Surface (D&amp;S)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contractual Services (CS)</fullName>
+                <controllingFieldValues>Global Services (GS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global Services (GS) Multi P&amp;L</fullName>
+                <controllingFieldValues>Global Services (GS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance Services (MS)</fullName>
+                <controllingFieldValues>Global Services (GS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technology Services (TS)</fullName>
+                <controllingFieldValues>Global Services (GS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Line Inspection</fullName>
+                <controllingFieldValues>PII Pipeline Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integrity Services</fullName>
+                <controllingFieldValues>PII Pipeline Solutions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <controllingFieldValues>Turbo Machinery</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Subsea</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Well Stream</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Offshore</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SS - Services</fullName>
+                <controllingFieldValues>Subsea (SS)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>BusinessTierToSubscribedObject</label>
+    <nameField>
+        <label>BusinessTierToSubscribedObject  Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>BusinessTierSubscribedObject</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

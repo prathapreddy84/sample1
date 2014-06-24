@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>If a User clicks the &quot;Request Addition of a New Account&quot; button, located on the custom search page, the values entered in the Customer Search section will be mapped to the new Account, which is displayed in view mode.  The User can then modify these mapped values and add/delete others before inserting the Account.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>The field&apos;s ID can be found by clicking on the field&apos;s name from within the Account&apos;s Fields section.  Once you have clicked on the field, the field&apos;s ID will be displayed in the hyperlink and look similar to this: https://na1.salesforce.com/00NC0000005FAjX?setupid=AccountFields.  In this instance, the field&apos;s ID is &quot;00NC0000005FAjX&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to Customer Legal Name.</inlineHelpText>
+        <label>Account Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to the street address.</inlineHelpText>
+        <label>Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to the city.</inlineHelpText>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to the country.</inlineHelpText>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUNS__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to the DUNS.</inlineHelpText>
+        <label>DUNS</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Province__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to the state/province.</inlineHelpText>
+        <label>State/Province</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Account field ID that is related to the zip/postal code.</inlineHelpText>
+        <label>Zip/Postal Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>GE MDM - Account Search Field Mapping</label>
+</CustomObject>

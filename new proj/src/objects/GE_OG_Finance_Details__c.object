@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to capture the finance details of the record.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Finance_CoE_Cycle_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Finance_Inbound_Response__c  -  Finance_Outbound_Response__c) * 24</formula>
+        <label>Finance CoE Cycle Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Finance_Inbound_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Inbound Response</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Finance_Outbound_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Outbound Response</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_HQ_Finance_Risk_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Risk Score</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Less than -1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-1.5 to 1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Greater than 1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Finance Details</relationshipLabel>
+        <relationshipName>Finance_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Actual__c</fullName>
+        <externalId>false</externalId>
+        <label>Recommended O&amp;G credit limit</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Ad_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Advanced Payment</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Additional_T_C_s__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(GE_OG_Account__r.GE_OG_Buss_Tier1__c)&amp;&quot;,&quot;&amp;TEXT(GE_HQ_Finance_Risk_Score__c)&amp;&quot;,&quot;&amp;TEXT(GE_OG_Finance_Credit_Limit__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Additional T&amp;C&apos;s</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Avg_CMFFinance_Approv_Cycle_Tim__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISNULL(GE_OG_KYC_Outbound_Resp__c)),NOT(ISNULL(Finance_Inbound_Response__c))),((Finance_Inbound_Response__c - GE_OG_KYC_Outbound_Resp__c ) )* 24,NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average CMF + Finance Approval Cycle Tim</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Avg_Fin_CoE_Cycle_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISNULL(GE_OG_CMF_INBOUND_RESP__c)),NOT(ISNULL(Finance_Inbound_Response__c))),((Finance_Inbound_Response__c - GE_OG_CMF_INBOUND_RESP__c ) )* 24,NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average Finance CoE Cycle Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Business_Tier__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Tier</label>
+        <referenceTo>GE_HQ_P_L__c</referenceTo>
+        <relationshipLabel>Finance Details</relationshipLabel>
+        <relationshipName>GE_OG_Finance</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_BussToFin__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>BusinessTierToFinance</label>
+        <referenceTo>GE_OG_BussTierToFince__c</referenceTo>
+        <relationshipLabel>Finance Details</relationshipLabel>
+        <relationshipName>Finance_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_CMF_INBOUND_RESP__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.CMF_Inbound_Response__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CMF INBOUND RESPONSE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Com_Finance_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercial Finance Contact Email</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Com_Finance_Contact_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercial Finance Contact First Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Com_Finance_Contact_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercial Finance Contact Last Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Com_Finance_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Commercial Finance Contact</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Finance_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Comment__c</fullName>
+        <description>This is created to use for Accounts - Finance on KYC</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Credit_Line_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Line Requested</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Cust_accepted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has the customer accepted Advanced Payme</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_FIN_DUNS_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.GE_HQ_DUNS_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUNS Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.ShippingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.ShippingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_CoE_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance CoE Age (in hrs)</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_CoE_New_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance CoE New Value</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_CoE_Old_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance CoE Old Value</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.ShippingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_Re_Review_New_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Re-Review New Value</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_Re_Review_Old_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Re-Review Old Value</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_Rereview__c</fullName>
+        <externalId>false</externalId>
+        <formula>(GE_OG_KYC__r.GE_OG_Finance_checked__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Finance Re review</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.ShippingState</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Fin_Zip__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_Account__r.ShippingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finan_TC__c</fullName>
+        <externalId>false</externalId>
+        <label>Recommended Finance T&amp;C&apos;s</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Completed_Rejected_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>( GE_OG_Finance_Completed_Timestamp__c - GE_OG_Finance_In_Process_Timestamp__c )*24</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Finance Completed/RejectedAge (in hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Completed_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Completed Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Country_Risk__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Country Risk</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Credit_Limit__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Credit Limit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>$0 - $10000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>$10001 - $500000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>$500001 - $1000000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>$1000001 - $5000000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>$5000001 - $1000000000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_In_Process_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance In Progress Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Sent_Back_Counter__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Sent Back Counter</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Sent_Back_Interim__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Sent Back Interim</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Sent_Back_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Sent Back Time Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Finance_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Due Diligence</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending User Review - On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_KYC_Outbound_Resp__c</fullName>
+        <externalId>false</externalId>
+        <formula>GE_OG_KYC__r.KYC_Outbound_Response__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>KYC Outbound Response</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_KYC__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>KYC</label>
+        <referenceTo>GE_PRM_KYC_Termination_Checklist__c</referenceTo>
+        <relationshipLabel>Finance Details</relationshipLabel>
+        <relationshipName>GE_OG_Finance_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Max_CMF_Fin_Approv_CycleTime__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISNULL(GE_OG_KYC_Outbound_Resp__c)),NOT(ISNULL(Finance_Inbound_Response__c))),((Finance_Inbound_Response__c - GE_OG_KYC_Outbound_Resp__c ) )* 24,NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Max CMF + Finance Approval Cycle Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Max_Fin_CoE_Cycle_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISNULL(GE_OG_CMF_INBOUND_RESP__c)),NOT(ISNULL(Finance_Inbound_Response__c))),((Finance_Inbound_Response__c - GE_OG_CMF_INBOUND_RESP__c ) )* 24,NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Max Finance CoE Cycle Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Min_CMF_Fin_Approv_Cycle_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISNULL(GE_OG_KYC_Outbound_Resp__c)),NOT(ISNULL(Finance_Inbound_Response__c))),((Finance_Inbound_Response__c - GE_OG_KYC_Outbound_Resp__c ) )* 24,NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Min CMF + Finance Approval Cycle Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Min_Fin_CoE_Cycle_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISNULL(GE_OG_CMF_INBOUND_RESP__c)),NOT(ISNULL(Finance_Inbound_Response__c))),((Finance_Inbound_Response__c - GE_OG_CMF_INBOUND_RESP__c ) )* 24,NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Min Finance CoE Cycle Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Resubmitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Resubmitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier1__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(GE_OG_Account__r.GE_OG_Buss_Tier1__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tier 1 P&amp;L</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier2__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(GE_OG_Account__r.GE_OG_Buss_Tier2__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tier 2  P&amp;L</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GE_OG_Tier3__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(GE_OG_Account__r.GE_OG_Buss_Tier3__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tier 3 P&amp;L</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ge_OG_Account_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(GE_OG_Account__r.GE_HQ_Request_Status__c)</formula>
+        <label>CMF Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Finance Details</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>FIN-{000000}</displayFormat>
+        <label>Finance #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Finance Details</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>GE_OG_FinanceEdit</fullName>
+        <active>true</active>
+        <label>FinanceEdit</label>
+        <picklistValues>
+            <picklist>GE_HQ_Finance_Risk_Score__c</picklist>
+            <values>
+                <fullName>-1%2E5 to 1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greater than 1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than -1%2E5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_OG_Finance_Country_Risk__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_OG_Finance_Credit_Limit__c</picklist>
+            <values>
+                <fullName>%240 - %2410000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241000001 - %245000000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2410001 - %24500000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245000001 - %241000000000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24500001 - %241000000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_OG_Finance_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Due Diligence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending User Review - On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GE_OG_FinanceLocked</fullName>
+        <active>true</active>
+        <label>FinanceLocked</label>
+        <picklistValues>
+            <picklist>GE_HQ_Finance_Risk_Score__c</picklist>
+            <values>
+                <fullName>-1%2E5 to 1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greater than 1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than -1%2E5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_OG_Finance_Country_Risk__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_OG_Finance_Credit_Limit__c</picklist>
+            <values>
+                <fullName>%240 - %2410000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241000001 - %245000000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2410001 - %24500000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245000001 - %241000000000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24500001 - %241000000</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GE_OG_Finance_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Due Diligence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending User Review - On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>GE_OG_Tier1__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GE_OG_Tier2__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GE_OG_Tier3__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GE_OG_Finance_Credit_Limit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GE_HQ_Finance_Risk_Score__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GE_OG_Finance_Status__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>GE_OG_FinApprove</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Approve</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if({!GE_OG_Finance_Details__c.GE_OG_Comments__c} )
+alert(&quot;Please enter Comments before approving.&quot;);
+else
+window.location = &quot;/apex/GE_OG_FinanceButton?id={!GE_OG_Finance_Details__c.Id}&amp;btntype=approved&quot;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GE_OG_Reject</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Reject</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if ( {!ISBLANK(GE_OG_Finance_Details__c.GE_OG_Comments__c) })
+alert(&quot;Please enter Comments before rejecting.&quot;);
+else
+window.location = &quot;/apex/GE_HQ_KYC_Buttons?id={!GE_PRM_KYC_Termination_Checklist__c.Id}&amp;btntype=rejected&quot;;</url>
+    </webLinks>
+</CustomObject>
